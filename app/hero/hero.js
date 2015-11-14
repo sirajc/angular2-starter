@@ -33,12 +33,12 @@ var HeroComponent = (function () {
         router_1.RouteConfig([
             {
                 path: '/detail',
-                as: 'Detail',
+                name: 'Detail',
                 component: hero_detail_component_1.HeroDetail
             },
             {
                 path: '/',
-                as: 'List',
+                name: 'List',
                 component: heroes_component_1.Heroes
             }
         ]), 

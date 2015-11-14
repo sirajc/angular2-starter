@@ -29,7 +29,7 @@ var AppComponent = (function () {
             },
             {
                 path: '/hero/...',
-                as: 'Hero',
+                name: 'Hero',
                 component: hero_1.HeroComponent
             }
         ]), 
