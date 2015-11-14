@@ -19,7 +19,7 @@ import {HeroComponent} from './hero/hero';
   },
   {
     path: '/hero/...',
-    as: 'Hero',
+    name: 'Hero',
     component: HeroComponent
   }
 ])

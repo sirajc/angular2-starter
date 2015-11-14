@@ -1,7 +1,7 @@
 #Angular2 Starter
 An Angular2 application with routing, Child component routing. Gulp as build tool for html and css. npm's tsc for typescript from gulp
 
-[DEMO](http://sirajc.github.io/angular2-starter/#/hero/)
+[DEMO](http://sirajc.github.io/angular2-starter)
 ##Steps to use
 1. Fork and clone this repository
 1. Run `npm install`
@@ -25,7 +25,7 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 
 	The MIT License
 
-	Copyright &copy; 2015 Sirajuddin Choudhary
+	Copyright (c) 2015 Sirajuddin Choudhary
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal

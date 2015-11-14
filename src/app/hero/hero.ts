@@ -19,12 +19,12 @@ export { HEROES } from './heroes.const';
 @RouteConfig([
   {
     path: '/detail',
-    as: 'Detail',
+    name: 'Detail',
     component: HeroDetail
   },
   {
     path: '/',
-    as: 'List',
+    name: 'List',
     component: Heroes
   }
 ])
