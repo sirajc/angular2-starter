@@ -6,7 +6,7 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 1. Fork and clone this repository
 1. Run `npm install`
 1. Run `gulp` to start watching html, css and typescript changes
-1. Run `npm start` to start live-server with reload
+1. Run `npm start` to start lite-server with reload
 
 ##Angular2 Features
 1. Components and Child Components
@@ -15,7 +15,7 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 ##Build Tool Features
 1. Seperate build directory
 1. One command `gulp` to watch css, html and typescript
-1. Gulp uses `npm run tsc` internally so no typescript wrapper for gulp is required
+1. Transpile TS and reload browser as you code
 
 ##TODO
 - [ ] Move to SCSS
@@ -24,6 +24,10 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 - [ ] Font Awesome
 - [ ] Gulp Image task
 - [ ] Prod Build
+
+##NOTE
+1. App runs on port 8001, configurable in package.json under scripts
+1. lite-server uses browserSync and runs on port 3000
 
 ## Copyright and license
 
