@@ -18,8 +18,12 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 1. Gulp uses `npm run tsc` internally so no typescript wrapper for gulp is required
 
 ##TODO
-1. Move to SCSS
-1. Tests
+- [ ] Move to SCSS
+- [ ] Tests
+- [ ] Bootstrap 4
+- [ ] Font Awesome
+- [ ] Gulp Image task
+- [ ] Prod Build
 
 ## Copyright and license
 

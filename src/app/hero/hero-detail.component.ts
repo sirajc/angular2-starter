@@ -1,7 +1,7 @@
-import {Component, NgIf} from 'angular2/angular2';
+import {Component} from 'angular2/angular2';
 import {RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Hero} from './hero.model';
-import { HEROES } from './heroes.const';
+import {HEROES} from './heroes.const';
 
 @Component({
   selector: 'hero-detail',
@@ -13,20 +13,20 @@ import { HEROES } from './heroes.const';
     }
   `],
   inputs: ['hero'],
-  directives: [NgIf, ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES]
 })
 export class HeroDetail {
   public hero: Hero;
   private id: number;
 
-  constructor(private params: RouteParams) {
-    this.id = Number.parseInt(params.get('id'));
+  constructor(private _params: RouteParams) {
+    this.id = Number.parseInt(_params.get('id'));
     if(this.id) {
-      this.hero = this.getHero(this.id);
+      this.hero = this._getHero(this.id);
     }
   }
 
-  private getHero(id: number) : Hero {
+  private _getHero(id: number) : Hero {
     var hero : Hero;
     HEROES.forEach(element => {
       if(element.id === id) {
