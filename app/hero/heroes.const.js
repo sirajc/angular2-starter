@@ -10,4 +10,5 @@ exports.HEROES = [
     { "id": 19, "name": "Wolverine" },
     { "id": 20, "name": "Magneto" }
 ];
+
 //# sourceMappingURL=heroes.const.js.map

@@ -13,14 +13,14 @@ var angular2_1 = require('angular2/angular2');
 var router_1 = require('angular2/router');
 var heroes_const_1 = require('./heroes.const');
 var HeroDetail = (function () {
-    function HeroDetail(params) {
-        this.params = params;
-        this.id = Number.parseInt(params.get('id'));
+    function HeroDetail(_params) {
+        this._params = _params;
+        this.id = Number.parseInt(_params.get('id'));
         if (this.id) {
-            this.hero = this.getHero(this.id);
+            this.hero = this._getHero(this.id);
         }
     }
-    HeroDetail.prototype.getHero = function (id) {
+    HeroDetail.prototype._getHero = function (id) {
         var hero;
         heroes_const_1.HEROES.forEach(function (element) {
             if (element.id === id) {
@@ -35,11 +35,12 @@ var HeroDetail = (function () {
             templateUrl: 'app/hero/hero-detail.component.html',
             styles: ["\n    .hero-detail {\n      font-size: 120%;\n      font-weight: 700;\n    }\n  "],
             inputs: ['hero'],
-            directives: [angular2_1.NgIf, router_1.ROUTER_DIRECTIVES]
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [router_1.RouteParams])
     ], HeroDetail);
     return HeroDetail;
 })();
 exports.HeroDetail = HeroDetail;
+
 //# sourceMappingURL=hero-detail.component.js.map

@@ -29,11 +29,12 @@ var Heroes = (function () {
             selector: 'heroes',
             templateUrl: 'app/hero/heroes.component.html',
             styleUrls: ['app/hero/heroes.component.css'],
-            directives: [angular2_1.CORE_DIRECTIVES, angular2_1.FORM_DIRECTIVES, hero_detail_component_1.HeroDetail, router_1.ROUTER_DIRECTIVES]
+            directives: [hero_detail_component_1.HeroDetail, router_1.ROUTER_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [])
     ], Heroes);
     return Heroes;
 })();
 exports.Heroes = Heroes;
+
 //# sourceMappingURL=heroes.component.js.map
