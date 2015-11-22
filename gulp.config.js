@@ -5,13 +5,17 @@ module.exports = function () {
     /**
      * File paths
      */
-    src: client,
     build: './build/',
-    tsMaps: '.', // write map in same location as js
-    html: client + '**/*.html',
     css: client + '**/*.css',
+    html: client + '**/*.html',
+    scss: client + '**/*.scss',
+    src: client,
     ts: client + '**/*.ts',
+    tsMaps: '.', // write map in same location as js
 
+    /**
+     * Configs
+     */
     defaultPort: '7203'
   };
 

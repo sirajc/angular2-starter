@@ -12,16 +12,17 @@ var port = process.env.PORT || config.defaultPort;
  * @return {Stream}
  */
 gulp.task('styles', ['clean-styles'], function () {
-  log('Copying CSS to build');
+  log('Compiling SCSS to build');
 
   return gulp
-    .src(config.css)
+    .src(config.scss)
     .pipe($.plumber()) // exit gracefully if something fails after this
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe(gulp.dest(config.build));
 });
 
-gulp.task('css-watcher', function () {
-  gulp.watch([config.css], ['styles']);
+gulp.task('scss-watcher', function () {
+  gulp.watch([config.scss], ['styles']);
 });
 
 /**
@@ -78,7 +79,7 @@ gulp.task('build', ['styles', 'html', 'tsc'], function () {
 /**
  * Watch for CSS and Html changes
  */
-gulp.task('default', ['build', 'css-watcher', 'html-watcher', 'ts-watcher'], function() {
+gulp.task('default', ['build', 'scss-watcher', 'html-watcher', 'ts-watcher'], function() {
   var msg = {
     title: 'gulp',
     subtitle: 'Watching for HTML, CSS and Typescript changes...'
