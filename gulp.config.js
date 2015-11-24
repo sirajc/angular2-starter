@@ -1,16 +1,18 @@
 module.exports = function () {
-  var client = './src/';
+  var src = 'src/';
 
   var config = {
     /**
      * File paths
      */
     build: './build/',
-    css: client + '**/*.css',
-    html: client + '**/*.html',
-    scss: client + '**/*.scss',
-    src: client,
-    ts: client + '**/*.ts',
+    css: src + '**/*.css',
+    html: src + '**/*.html',
+    images: src + 'images/**/*.*',
+    imagesRoot: 'images',
+    scss: src + '**/*.scss',
+    src: src,
+    ts: src + '**/*.ts',
     tsMaps: '.', // write map in same location as js
 
     /**

@@ -5,11 +5,17 @@ import {HeroComponent} from './hero/hero';
 @Component({
   selector: 'my-app',
   template: `
-    <h1>{{title}}</h1>
+    <h1><img src="images/angular-logo.png" class="ng2-logo" > {{title}}</h1>
     <a [router-link]="['/Hero', 'List']">Marvel Heroes</a>
     <br>
     <router-outlet></router-outlet>
   `,
+  styles: [`
+    .ng2-logo {
+      height: 26px;
+      margin-bottom: -2px;
+    }
+  `],
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
