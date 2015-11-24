@@ -1,6 +1,7 @@
 var config = require('./gulp.config')();
 var del = require('del');
 var gulp = require('gulp');
+var path = require('path');
 var $ = require('gulp-load-plugins')({lazy: true});
 
 var colors = $.util.colors;
@@ -27,6 +28,7 @@ gulp.task('scss-watcher', function () {
 
 /**
  * Copying Html to build
+ * TODO Add compression and other stuff for PROD
  * @return {Stream}
  */
 gulp.task('html', ['clean-html'], function () {
@@ -38,8 +40,27 @@ gulp.task('html', ['clean-html'], function () {
     .pipe(gulp.dest(config.build));
 });
 
+/**
+ * Copying Html to build
+ * @return {Stream}
+ */
+gulp.task('html-dev', function () {
+  log('Syncing Html to build');
+
+  return gulp
+    .src(config.html)
+    .pipe($.plumber()) // exit gracefully if something fails after this
+    .pipe($.newer(config.build))
+    .pipe(gulp.dest(config.build));
+});
+
 gulp.task('html-watcher', function () {
-  gulp.watch([config.html], ['html']);
+  var watcher = gulp.watch([config.html], ['html-dev']);
+  watcher.on('change', function(ev) {
+      if(ev.type === 'deleted') {
+          del(path.relative('./', ev.path).replace(config.src,config.build));
+      }
+  });
 });
 
 /**
