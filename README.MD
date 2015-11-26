@@ -1,5 +1,5 @@
 #Angular2 Starter
-An Angular2 application with routing, Child component routing. Gulp as build tool for html, scss, imagesa and typescript transpilation
+An Angular2 application with routing, Child component routing. Gulp as build tool for html, scss, images and typescript transpilation
 
 [DEMO](http://sirajc.github.io/angular2-starter)
 ##Steps to use
@@ -14,7 +14,7 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 
 ##Build Tool Features
 1. Seperate build directory
-1. One command `gulp` to watch css, html, images and typescript
+1. One command `gulp` to watch scss, html, images and typescript
 1. Transpile TS and reload browser as you code
 
 ##TODO DEV Build
