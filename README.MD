@@ -1,12 +1,12 @@
 #Angular2 Starter
-An Angular2 application with routing, Child component routing. Gulp as build tool for html and css. npm's tsc for typescript from gulp
+An Angular2 application with routing, Child component routing. Gulp as build tool for html, scss, imagesa and typescript transpilation
 
 [DEMO](http://sirajc.github.io/angular2-starter)
 ##Steps to use
 1. Fork and clone this repository
 1. Run `npm install`
 1. Run `gulp` to start watching html, css and typescript changes
-1. Run `npm start` to start lite-server with reload
+1. On new termial run `npm start` to start lite-server with reload
 
 ##Angular2 Features
 1. Components and Child Components
@@ -14,16 +14,27 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 
 ##Build Tool Features
 1. Seperate build directory
-1. One command `gulp` to watch css, html and typescript
+1. One command `gulp` to watch css, html, images and typescript
 1. Transpile TS and reload browser as you code
 
-##TODO
-- [ ] Move to SCSS
-- [ ] Tests
+##TODO DEV Build
+- [x] Typescript
+- [x] Html
+- [x] SCSS
+- [x] Images
+- [ ] Unit Test
+- [ ] E2E Test
+
+##TODO Integrations
 - [ ] Bootstrap 4
 - [ ] Font Awesome
-- [ ] Gulp Image task
-- [ ] Prod Build
+
+##TODO PROD Build
+- [ ] Minfications - CSS and JS
+- [x] Image compression
+- [ ] Vendor bundling
+- [ ] Font Bundling
+- [ ] Cache Buster
 
 ##NOTE
 1. App runs on port 8001, configurable in package.json under scripts
