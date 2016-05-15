@@ -6,30 +6,35 @@ Use this as starter/base/seed app to kickstart your Angular2 project
 ##Steps to use
 1. Fork and clone this repository
 1. Run `npm install`
-1. Run `gulp` to start watching html, css and typescript changes
-1. On new termial run `npm start` to start lite-server with reload
+1. Run `npm run typings`, to install all the typing files
+1. Run `gulp` to start watching html, scss and typescript changes and do a first build
+1. On new termial run `npm start` to start lite-server with live reload support
 
 ##Angular2 Features
-1. Components and Child Components
-1. App Routing and Child Component Routing and linking
+1. Code is based on Angular2 RC1
+1. Components and Child Components and Directives
+1. App Routing and Child Component Routing and linking using `@angular/router-deprecated`
 
 ##Build Tool Features
 1. Seperate build directory
 1. One command `gulp` to watch scss, html, images and typescript
-1. Transpile TS and reload browser as you code
+1. Any changes to html, ts or scss files reloads browser
+1. Typescript transpilation on the flys
 
 ##TODO DEV Build
 - [x] Typescript
 - [x] Html
 - [x] SCSS
 - [x] Images
+- [ ] Follow Angular 2 Styleguide
+- [ ] TS Lint
+- [ ] Integrate Codelyzer
 - [ ] Unit Test
 - [ ] E2E Test
-- [ ] TS Lint
 - [ ] App tsd files
 
 ##TODO Integrations
-- [ ] Bootstrap 4
+- [ ] Bootstrap 4 (Available in [@sirajc/angular2-bs4-navbar](https://github.com/sirajc/angular2-bs4-navbar))
 - [ ] Font Awesome
 
 ##TODO PROD Build

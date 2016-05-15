@@ -1,12 +1,12 @@
-import {Component} from 'angular2/angular2';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component} from '@angular/core';
+import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {HeroComponent} from './hero/hero';
 
 @Component({
   selector: 'my-app',
   template: `
     <h1><img src="images/angular-logo.png" class="ng2-logo" > {{title}}</h1>
-    <a [router-link]="['/Hero', 'List']">Marvel Heroes</a>
+    <a [routerLink]="['/Hero', 'List']">Marvel Heroes</a>
     <br>
     <router-outlet></router-outlet>
   `,
@@ -21,12 +21,13 @@ import {HeroComponent} from './hero/hero';
 @RouteConfig([
   {
     path: '/',
-    redirectTo: '/hero'
+    redirectTo: ['/Hero', 'List']
   },
   {
     path: '/hero/...',
     name: 'Hero',
-    component: HeroComponent
+    component: HeroComponent,
+    useAsDefault: true
   }
 ])
 export class AppComponent {

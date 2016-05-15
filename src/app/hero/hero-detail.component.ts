@@ -1,5 +1,5 @@
-import {Component} from 'angular2/angular2';
-import {RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component} from '@angular/core';
+import {RouteParams, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {Hero} from './hero.model';
 import {HEROES} from './heroes.const';
 
@@ -20,7 +20,7 @@ export class HeroDetail {
   private id: number;
 
   constructor(private _params: RouteParams) {
-    this.id = Number.parseInt(_params.get('id'));
+    this.id = Number(_params.get('id'));
     if(this.id) {
       this.hero = this._getHero(this.id);
     }

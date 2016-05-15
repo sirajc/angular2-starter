@@ -1,12 +1,12 @@
 #!/bin/sh
 echo copying app files...
 cd build/app
-cp -Rv . ../../../io-angular2-starter/app/
+cp -Rv . ../../gh-pages/app/
 echo copying images
 cd ..
 cd images
-cp -Rv . ../../../io-angular2-starter/images
-cd ../../../io-angular2-starter/
+cp -Rv . ../../gh-pages/images
+cd ../../gh-pages/
 echo removing sourcemaps
 find . -type f -name '*.js.map' -delete
 echo staging files in git
