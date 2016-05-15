@@ -1,3 +1,4 @@
+"use strict";
 exports.HEROES = [
     { "id": 11, "name": "Iron Man" },
     { "id": 12, "name": "Spider Man" },

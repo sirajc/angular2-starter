@@ -1,21 +1,20 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
-    switch (arguments.length) {
-        case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
-        case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
-        case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
-    }
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var angular2_1 = require('angular2/angular2');
-var router_1 = require('angular2/router');
+var core_1 = require('@angular/core');
+var router_deprecated_1 = require('@angular/router-deprecated');
 var heroes_const_1 = require('./heroes.const');
 var HeroDetail = (function () {
     function HeroDetail(_params) {
         this._params = _params;
-        this.id = Number.parseInt(_params.get('id'));
+        this.id = Number(_params.get('id'));
         if (this.id) {
             this.hero = this._getHero(this.id);
         }
@@ -30,17 +29,17 @@ var HeroDetail = (function () {
         return hero;
     };
     HeroDetail = __decorate([
-        angular2_1.Component({
+        core_1.Component({
             selector: 'hero-detail',
             templateUrl: 'app/hero/hero-detail.component.html',
             styles: ["\n    .hero-detail {\n      font-size: 120%;\n      font-weight: 700;\n    }\n  "],
             inputs: ['hero'],
-            directives: [router_1.ROUTER_DIRECTIVES]
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [router_1.RouteParams])
+        __metadata('design:paramtypes', [router_deprecated_1.RouteParams])
     ], HeroDetail);
     return HeroDetail;
-})();
+}());
 exports.HeroDetail = HeroDetail;
 
 //# sourceMappingURL=hero-detail.component.js.map
