@@ -1,5 +1,6 @@
 #Angular2 Starter
-An Angular2 application with routing, Child component routing. Gulp as build tool for html, scss, images and typescript transpilation
+An Angular2 starter/seed application with routing, Child component routing. Gulp as build tool for html, scss, images and typescript transpilation
+Use this as starter/base/seed app to kickstart your Angular2 project
 
 [DEMO](http://sirajc.github.io/angular2-starter)
 ##Steps to use
@@ -24,6 +25,8 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 - [x] Images
 - [ ] Unit Test
 - [ ] E2E Test
+- [ ] TS Lint
+- [ ] App tsd files
 
 ##TODO Integrations
 - [ ] Bootstrap 4
@@ -38,13 +41,13 @@ An Angular2 application with routing, Child component routing. Gulp as build too
 
 ##NOTE
 1. App runs on port 8001, configurable in package.json under scripts
-1. lite-server uses browserSync and runs on port 3000
+1. lite-server uses browserSync and runs on port 3000, configurable in bs-config.json
 
 ## Copyright and license
 
 	The MIT License
 
-	Copyright (c) 2015 Sirajuddin Choudhary
+	Copyright (c) 2015-2016 Sirajuddin Choudhary
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
