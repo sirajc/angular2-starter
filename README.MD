@@ -11,9 +11,9 @@ Use this as starter/base/seed app to kickstart your Angular2 project
 1. On new termial run `npm start` to start lite-server with live reload support
 
 ##Angular2 Features
-1. Code is based on Angular2 RC1
+1. Code is based on Angular2 RC2
 1. Components and Child Components and Directives
-1. App Routing and Child Component Routing and linking using `@angular/router-deprecated`
+1. App Routing and Child Component Routing and linking using `@angular/router@3.0.0-alpha.7`
 
 ##Build Tool Features
 1. Seperate build directory

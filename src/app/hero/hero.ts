@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 import { HeroDetail } from './hero-detail.component';
 import { Heroes } from './heroes.component';
 
@@ -16,18 +16,6 @@ export { HEROES } from './heroes.const';
   `,
   directives: [ROUTER_DIRECTIVES]
 })
-@RouteConfig([
-  {
-    path: '/detail',
-    name: 'Detail',
-    component: HeroDetail
-  },
-  {
-    path: '/',
-    name: 'List',
-    component: Heroes
-  }
-])
 export class HeroComponent {
 
 }

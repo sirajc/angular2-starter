@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {RouteParams, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import {ROUTER_DIRECTIVES, ActivatedRoute} from '@angular/router';
 import {Hero} from './hero.model';
 import {HEROES} from './heroes.const';
 
@@ -19,8 +19,8 @@ export class HeroDetail {
   public hero: Hero;
   private id: number;
 
-  constructor(private _params: RouteParams) {
-    this.id = Number(_params.get('id'));
+  constructor(private _activatedRoute: ActivatedRoute) {
+    this.id = Number(_activatedRoute.snapshot.params["id"]);
     if(this.id) {
       this.hero = this._getHero(this.id);
     }
