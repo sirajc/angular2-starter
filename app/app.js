@@ -9,8 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_deprecated_1 = require('@angular/router-deprecated');
-var hero_1 = require('./hero/hero');
+var router_1 = require('@angular/router');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
@@ -18,22 +17,10 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1><img src=\"images/angular-logo.png\" class=\"ng2-logo\" > {{title}}</h1>\n    <a [routerLink]=\"['/Hero', 'List']\">Marvel Heroes</a>\n    <br>\n    <router-outlet></router-outlet>\n  ",
+            template: "\n    <h1><img src=\"images/angular-logo.png\" class=\"ng2-logo\" > {{title}}</h1>\n    <a [routerLink]=\"['hero']\">Marvel Heroes</a>\n    <br>\n    <router-outlet></router-outlet>\n  ",
             styles: ["\n    .ng2-logo {\n      height: 26px;\n      margin-bottom: -2px;\n    }\n  "],
-            directives: [router_deprecated_1.ROUTER_DIRECTIVES]
-        }),
-        router_deprecated_1.RouteConfig([
-            {
-                path: '/',
-                redirectTo: ['/Hero', 'List']
-            },
-            {
-                path: '/hero/...',
-                name: 'Hero',
-                component: hero_1.HeroComponent,
-                useAsDefault: true
-            }
-        ]), 
+            directives: [router_1.ROUTER_DIRECTIVES]
+        }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_deprecated_1 = require('@angular/router-deprecated');
+var router_1 = require('@angular/router');
 var hero_detail_component_1 = require('./hero-detail.component');
 var heroes_const_1 = require('./heroes.const');
 var Heroes = (function () {
@@ -28,7 +28,7 @@ var Heroes = (function () {
             selector: 'heroes',
             templateUrl: 'app/hero/heroes.component.html',
             styleUrls: ['app/hero/heroes.component.css'],
-            directives: [hero_detail_component_1.HeroDetail, router_deprecated_1.ROUTER_DIRECTIVES]
+            directives: [hero_detail_component_1.HeroDetail, router_1.ROUTER_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [])
     ], Heroes);

@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_deprecated_1 = require('@angular/router-deprecated');
+var router_1 = require('@angular/router');
 var heroes_const_1 = require('./heroes.const');
 var HeroDetail = (function () {
-    function HeroDetail(_params) {
-        this._params = _params;
-        this.id = Number(_params.get('id'));
+    function HeroDetail(_activatedRoute) {
+        this._activatedRoute = _activatedRoute;
+        this.id = Number(_activatedRoute.snapshot.params["id"]);
         if (this.id) {
             this.hero = this._getHero(this.id);
         }
@@ -34,9 +34,9 @@ var HeroDetail = (function () {
             templateUrl: 'app/hero/hero-detail.component.html',
             styles: ["\n    .hero-detail {\n      font-size: 120%;\n      font-weight: 700;\n    }\n  "],
             inputs: ['hero'],
-            directives: [router_deprecated_1.ROUTER_DIRECTIVES]
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [router_deprecated_1.RouteParams])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute])
     ], HeroDetail);
     return HeroDetail;
 }());
