@@ -9,6 +9,15 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
     <a [routerLink]="['hero']">Marvel Heroes</a>
     <br>
     <router-outlet></router-outlet>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Angular 2 RC3 and Router v3-alpha.7</h3>
   `,
   styles: [`
     .ng2-logo {
