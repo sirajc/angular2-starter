@@ -3,6 +3,7 @@ import { ROUTER_DIRECTIVES} from '@angular/router';
 
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
   template: `
     <h1><img src="images/angular-logo.png" class="ng2-logo" > {{title}}</h1>
