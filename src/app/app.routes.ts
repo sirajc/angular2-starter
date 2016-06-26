@@ -1,7 +1,6 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import {HeroComponent} from './hero/hero';
-import {HERO_ROUTES} from './hero/hero.routes';
+import { HeroComponent, HERO_ROUTES } from './hero';
 
 export const APP_ROUTES: RouterConfig = [
   { path: '', redirectTo: 'hero', terminal: true },
