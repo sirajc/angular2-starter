@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
+import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES} from '@angular/router';
 
 
 @Component({
@@ -28,5 +28,5 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
   directives: [ROUTER_DIRECTIVES]
 })
 export class AppComponent {
-  public title = 'Tour of Heroes';
+  public title = 'Angular2 Starter';
 }
