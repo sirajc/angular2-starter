@@ -1,8 +1,9 @@
 "use strict";
-var hero_1 = require('./hero');
+var hero_detail_1 = require('./hero-detail');
+var hero_list_1 = require('./hero-list');
 exports.HERO_ROUTES = [
-    { path: '', component: hero_1.Heroes },
-    { path: 'detail', component: hero_1.HeroDetail }
+    { path: '', component: hero_list_1.HeroListComponent },
+    { path: 'detail', component: hero_detail_1.HeroDetail }
 ];
 
 //# sourceMappingURL=hero.routes.js.map

@@ -1,12 +1,11 @@
 "use strict";
 var router_1 = require('@angular/router');
-var hero_1 = require('./hero/hero');
-var hero_routes_1 = require('./hero/hero.routes');
+var hero_1 = require('./hero');
 exports.APP_ROUTES = [
     { path: '', redirectTo: 'hero', terminal: true },
     { path: 'hero',
         component: hero_1.HeroComponent,
-        children: hero_routes_1.HERO_ROUTES.slice()
+        children: hero_1.HERO_ROUTES.slice()
     }
 ];
 exports.APP_ROUTER_PROVIDERS = [

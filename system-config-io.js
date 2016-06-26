@@ -6,12 +6,13 @@
 (function(global) {
 
   var ngVer = '@2.0.0-rc.3'; // lock in the angular package version; do not let it float to current!
-  var routerVer = '@3.0.0-alpha.7'; // lock router version
+  var routerVer = '@3.0.0-alpha.8'; // lock router version
   var formsVer = '@0.1.0'; // lock forms version
 
   //map tells the System loader where to look for things
   var  map = {
     'app':                        'app',
+    'main-io':                       'main-io.js',
 
     '@angular':                   'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
     '@angular/router':            'https://npmcdn.com/@angular/router' + routerVer,
@@ -24,7 +25,6 @@
 
   //packages tells the System loader how to load when no filename and/or no extension
   var packages = {
-    'app':                        { main: 'main',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' }
     // 'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
   };
@@ -36,7 +36,7 @@
     // 'http',
     'platform-browser',
     'platform-browser-dynamic',
-    // 'router-deprecated',
+    // 'router',
     // 'upgrade',
   ];
 
@@ -45,6 +45,8 @@
   ngPackageNames.forEach(function(pkgName) {
     map['@angular/'+pkgName] = 'https://npmcdn.com/@angular/' + pkgName + ngVer;
   });
+
+  map['@angular/router'] = 'https://npmcdn.com/@angular/router' + routerVer;
 
   // Add package entries for angular packages
   ngPackageNames.forEach(function(pkgName) {
@@ -57,22 +59,26 @@
   });
 
   // No umd for router yet
-  packages['@angular/router'] = { main: 'index.js', defaultExtension: 'js' };
+  packages['@angular/router'] = { main: '/bundles/router.umd.js', defaultExtension: 'js' };
 
   // Forms not on rc yet
   packages['@angular/forms'] = { main: 'index.js', defaultExtension: 'js' };
 
+  var barrels = [
+    // Thirdparty barrels.
+    // App specific barrels.
+    'app',
+    'app/shared',
+    'app/hero',
+    'app/hero/hero-list',
+    'app/hero/hero-list/shared',
+    'app/hero/hero-detail',
+  ];
+  barrels.forEach(function (barrelName) {
+      packages[barrelName] = { main: 'index', defaultExtension: 'js' };
+  });
+
   var config = {
-    // DEMO ONLY! REAL CODE SHOULD NOT TRANSPILE IN THE BROWSER
-    // transpiler: 'ts',
-    // typescriptOptions: {
-    //   tsconfig: true
-    // },
-    // meta: {
-    //   'typescript': {
-    //     "exports": "ts"
-    //   }
-    // },
     map: map,
     packages: packages
   };
