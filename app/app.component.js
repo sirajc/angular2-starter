@@ -16,8 +16,9 @@ var AppComponent = (function () {
     }
     AppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-app',
-            template: "\n    <h1><img src=\"images/angular-logo.png\" class=\"ng2-logo\" > {{title}}</h1>\n    <a [routerLink]=\"['hero']\">Marvel Heroes</a>\n    <br>\n    <router-outlet></router-outlet>\n\n\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <h3>Angular 2 RC3 and Router v3-alpha.8</h3>\n  ",
+            template: "\n    <h1><img src=\"images/angular-logo.png\" class=\"ng2-logo\" > {{title}}</h1>\n    <a [routerLink]=\"['hero']\">Marvel Heroes</a>\n    <br>\n    <router-outlet></router-outlet>\n\n\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <h3>Angular 2 RC4 and Router v3-beta.2</h3>\n  ",
             styles: ["\n    .ng2-logo {\n      height: 26px;\n      margin-bottom: -2px;\n    }\n  "],
             directives: [router_1.ROUTER_DIRECTIVES]
         }), 

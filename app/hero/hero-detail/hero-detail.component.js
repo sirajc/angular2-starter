@@ -37,8 +37,9 @@ var HeroDetail = (function () {
     };
     HeroDetail = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'hero-detail',
-            templateUrl: 'app/hero/hero-detail/hero-detail.component.html',
+            templateUrl: 'hero-detail.component.html',
             styles: ["\n    .hero-detail {\n      font-size: 120%;\n      font-weight: 700;\n    }\n  "],
             inputs: ['hero'],
             directives: [router_1.ROUTER_DIRECTIVES]
