@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Angular2 Starter';
+var common_1 = require('@angular/common');
+var router_1 = require('@angular/router');
+var hero_routes_1 = require('./hero.routes');
+var HeroModule = (function () {
+    function HeroModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'my-app',
-            template: "\n    <h1><img src=\"images/angular-logo.png\" class=\"ng2-logo\" > {{title}}</h1>\n    <a [routerLink]=\"['hero']\">Marvel Heroes</a>\n    <br>\n    <router-outlet></router-outlet>\n\n\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <h3>Angular 2 RC5 and Router v3-rc.1</h3>\n  ",
-            styles: ["\n    .ng2-logo {\n      height: 26px;\n      margin-bottom: -2px;\n    }\n  "]
+    HeroModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule, router_1.RouterModule.forChild(hero_routes_1.HERO_ROUTES)],
+            declarations: [hero_routes_1.HERO_COMPONENTS]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroModule);
+    return HeroModule;
 }());
-exports.AppComponent = AppComponent;
+exports.HeroModule = HeroModule;
 
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=hero.module.js.map
