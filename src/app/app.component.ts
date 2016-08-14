@@ -18,7 +18,7 @@ import { ROUTER_DIRECTIVES} from '@angular/router';
     <br>
     <br>
     <br>
-    <h3>Angular 2 RC4 and Router v3-beta.2</h3>
+    <h3>Angular 2 RC5 and Router v3-rc.1</h3>
   `,
   styles: [`
     .ng2-logo {
