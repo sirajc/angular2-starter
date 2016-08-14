@@ -8,8 +8,7 @@ import { HEROES } from './shared';
   moduleId: module.id,
   selector: 'hero-list',
   templateUrl: 'hero-list.component.html',
-  styleUrls: ['hero-list.component.css'],
-  directives: [HeroDetail, ROUTER_DIRECTIVES]
+  styleUrls: ['hero-list.component.css']
 })
 export class HeroListComponent {
   public heroes = HEROES;

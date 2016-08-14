@@ -25,8 +25,7 @@ import { ROUTER_DIRECTIVES} from '@angular/router';
       height: 26px;
       margin-bottom: -2px;
     }
-  `],
-  directives: [ROUTER_DIRECTIVES]
+  `]
 })
 export class AppComponent {
   public title = 'Angular2 Starter';

@@ -14,8 +14,7 @@ import { HEROES } from '../hero-list/shared';
       font-weight: 700;
     }
   `],
-  inputs: ['hero'],
-  directives: [ROUTER_DIRECTIVES]
+  inputs: ['hero']
 })
 export class HeroDetail implements OnInit {
   public hero: Hero;
