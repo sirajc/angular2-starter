@@ -1,9 +1,9 @@
-import { RouterConfig } from '@angular/router';
+import { Route } from '@angular/router';
 import { HeroComponent } from './hero.component';
 import { HeroDetail } from './hero-detail';
 import { HeroListComponent } from './hero-list';
 
-export const HERO_ROUTES: RouterConfig = [
+export const HERO_ROUTES: Route[] = [
   {
     path: 'hero',
     component: HeroComponent,
